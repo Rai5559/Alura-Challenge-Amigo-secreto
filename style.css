@@ -160,3 +160,21 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
+
+/* Amigo item y botones */
+.friend-button{
+    padding: 1px;
+}
+
+.friendItem{
+    margin: 10px;
+}
+
+.update-input{
+    border: #000 solid 1.5px;
+}
+
+.update-button{
+    padding: 1px 4px;
+}
