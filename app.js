@@ -77,3 +77,33 @@ const onlyOneUpdate = () => {
     }
   });
 };
+
+const drawFriend = () => {
+  if (friendsArray.length === 0) {
+    alert("No hay amigos para sortear.");
+    return;
+  }
+
+  const randomIndex = Math.floor(Math.random() * friendsArray.length);
+  const randomFriend = friendsArray[randomIndex];
+
+  const friendList = document.getElementById("listaAmigos");
+  if (friendList) friendList.remove();
+
+  const drawButton = document.getElementById('drawFriend');
+  if(drawButton) drawButton.remove()
+
+  const winnerContainer = document.getElementById("winnerContainer");
+  const winnerName = document.getElementById("winnerName");
+
+  winnerName.textContent = randomFriend;
+  winnerContainer.classList.remove("hidden");
+
+  winnerContainer.innerHTML += `
+        <button id="resetButton" class="reset-button" onclick="resetAll()">Reiniciar</button>
+    `;
+};
+
+const resetAll = () => {
+  location.reload();
+};

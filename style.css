@@ -178,3 +178,52 @@ ul {
 .update-button{
     padding: 1px 4px;
 }
+
+/* Contenedor del amigo seleccionado */
+.hidden {
+    display: none;
+}
+
+#winnerContainer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f8ff;
+    border: 2px solid #1e90ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.winner-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1e90ff;
+    margin-bottom: 10px;
+}
+
+.winner-name {
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #ff4500;
+}
+
+/* Boton reset */
+.reset-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background-color: #ff4500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+    background-color: #e63900;
+}
