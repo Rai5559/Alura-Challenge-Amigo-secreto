@@ -78,6 +78,7 @@ const onlyOneUpdate = () => {
   });
 };
 
+// Function that draws a random friend from the list and displays it in the DOM
 const drawFriend = () => {
   if (friendsArray.length === 0) {
     alert("No hay amigos para sortear.");
