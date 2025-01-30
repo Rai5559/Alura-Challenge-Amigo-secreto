@@ -3,9 +3,9 @@ let friendsArray = [];
 
 // Function that validates a friend's name using regex and returns a boolean
 const validateFriend = (name) => {
-  const trimName = name.trim();
+  const trimName = name.trim(); 
   const regex =
-    /^([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(n+([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/;
+    /^([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/;
   return regex.test(trimName);
 };
 
