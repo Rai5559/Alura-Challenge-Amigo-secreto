@@ -16,11 +16,12 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--color-primary);
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Inter", sans-serif;
 }
 
 .main-content {
@@ -28,23 +29,25 @@ body {
     flex-direction: column;
     height: 100%;
     width: 100%;
+    max-width: 1200px;
+    align-items: center;
 }
 
 /* Banner */
 .header-banner {
-    flex: 40%;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 0 0;
+    padding: 20px 0;
 }
 
 /* Sección de entrada */
 .input-section {
-    flex: 60%;
+    flex: 2;
     background-color: var(--color-secondary);
     border: 1px solid #000;
-    border-radius: 64px 64px 0 0;
+    border-radius: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,16 +57,17 @@ body {
 
 /* Títulos */
 .main-title {
-    font-size: 48px;
+    font-size: 2.5rem; /* Usamos rem para escalabilidad */
     font-family: "Merriweather", serif;
     font-weight: 900;
     font-style: italic;
     color: var(--color-white);
+    text-align: center;
 }
 
 .section-title {
     font-family: "Inter", serif;
-    font-size: 36px;
+    font-size: 1.8rem; /* Usamos rem para escalabilidad */
     font-weight: 700;
     color: var(--color-primary);
     margin: 10px 0;
@@ -84,35 +88,26 @@ body {
     padding: 10px;
     border: 2px solid #000;
     border-radius: 25px 0 0 25px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .button-container {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
     justify-content: center;
-}
-
-/* Estilos de entrada de texto */
-.input-title {
-    flex: 1;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 2px solid #333;
-    border-right: none;
-    border-radius: 25px 0 0 25px;
-    font-family: "Merriweather", serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilos de botón */
 button {
-    padding: 15px 30px;
+    padding: 10px 20px;
     font-family: "Inter", sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     border: 2px solid #000;
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .button-add {
@@ -130,14 +125,15 @@ ul {
     list-style-type: none;
     color: var(--color-text);
     font-family: "Inter", sans-serif;
-    font-size: 18px;
+    font-size: 1rem;
     margin: 20px 0;
+    padding: 0;
 }
 
 .result-list {
     margin-top: 15px;
     color: #05DF05;
-    font-size: 22px;
+    font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
 }
@@ -146,37 +142,41 @@ ul {
 .button-draw {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
-    padding: 10px 40px;
+    max-width: 300px;
+    padding: 10px 20px;
     color: var(--color-white);
     background-color: var(--color-button);
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .button-draw img {
-    margin-right: 40px;
+    margin-right: 10px;
 }
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
 
-
 /* Amigo item y botones */
-.friend-button{
-    padding: 1px;
+.friend-button {
+    padding: 5px;
 }
 
-.friendItem{
+.friendItem {
     margin: 10px;
 }
 
-.update-input{
+.update-input {
     border: #000 solid 1.5px;
+    padding: 5px;
+    font-size: 1rem;
 }
 
-.update-button{
-    padding: 1px 4px;
+.update-button {
+    padding: 5px 10px;
+    font-size: 0.9rem;
 }
 
 /* Contenedor del amigo seleccionado */
@@ -196,7 +196,7 @@ ul {
 
 .winner-title {
     font-family: 'Inter', sans-serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #1e90ff;
     margin-bottom: 10px;
@@ -204,7 +204,7 @@ ul {
 
 .winner-name {
     font-family: 'Merriweather', serif;
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: 400;
     color: #ff4500;
 }
@@ -214,7 +214,7 @@ ul {
     margin-top: 20px;
     padding: 10px 20px;
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     color: white;
     background-color: #ff4500;
@@ -226,4 +226,84 @@ ul {
 
 .reset-button:hover {
     background-color: #e63900;
+}
+
+/* Responsive design (test) */
+@media (max-width: 768px) {
+    .header-banner{
+        flex-direction: column;
+    }
+    .input-section{
+        width: 90%;
+    }
+    .main-content {
+        padding: 0 20px;
+    }
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .input-name {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .button-draw {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .winner-title {
+        font-size: 1.2rem;
+    }
+
+    .winner-name {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-banner{
+        flex-direction: column;
+    }
+    .input-section{
+        width: 90%;
+    }
+    .main-title {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .input-name {
+        font-size: 0.8rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .button-draw {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .winner-title {
+        font-size: 1rem;
+    }
+
+    .winner-name {
+        font-size: 0.9rem;
+    }
 }
