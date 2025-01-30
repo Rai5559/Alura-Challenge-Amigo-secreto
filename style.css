@@ -233,9 +233,11 @@ ul {
     .header-banner{
         flex-direction: column;
     }
+
     .input-section{
         width: 90%;
     }
+
     .main-content {
         padding: 0 20px;
     }
@@ -259,6 +261,10 @@ ul {
     .button-draw {
         font-size: 0.9rem;
         padding: 8px 16px;
+    }
+
+    .update-input{
+        font-size: 0.9rem;
     }
 
     .winner-title {
@@ -297,6 +303,10 @@ ul {
     .button-draw {
         font-size: 0.8rem;
         padding: 6px 12px;
+    }
+
+    .update-input{
+        font-size: 0.9rem;
     }
 
     .winner-title {
